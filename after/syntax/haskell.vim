@@ -138,13 +138,13 @@ syntax match hsNiceOperator "\<Right\>"   conceal cchar=𝑅
 syntax match hsNiceOperator "\<Left\>"    conceal cchar=𝐿
 
 " syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=𝐌
-" syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=?	
-syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=⁇	
+" syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=?
+syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=⁇
 " syntax match hsNiceOperator "\<Just\>"    conceal cchar=𝐽
 syntax match hsNiceOperator "\<Just\>"    conceal cchar=✔
 " syntax match hsNiceOperator "\<Nothing\>" conceal cchar=𝑁
-" syntax match hsNiceOperator "\<Nothing\>" conceal cchar=∅
-syntax match hsNiceOperator "\<Nothing\>" conceal cchar=✘
+syntax match hsNiceOperator "\<Nothing\>" conceal cchar=∅
+syntax match hsNiceOperator "\<isNothing\>" conceal cchar=✘
 
 syntax match hsNiceOperator "\:\:" conceal cchar=⦂
 " 'A' option to not try to preserve indentation.
