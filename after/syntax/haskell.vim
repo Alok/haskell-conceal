@@ -305,11 +305,10 @@ if !Cf('↱')
     syntax keyword hsNiceOperator putStr conceal cchar=⎙
     syntax keyword hsNiceOperator putStrLn conceal cchar=⎙
 
-    syntax keyword hsNiceOperator fmap conceal cchar=↷
     syntax keyword hsNiceOperator map conceal cchar=↷
-    " syntax keyword hsNiceOperator filter conceal cchar=⬲
+    syntax keyword hsNiceOperator fmap conceal cchar=↷
 
-    syntax match hsNiceOperator /filter/ms=s,me=e conceal cchar=⬲
+    syntax keyword hsNiceOperator filter conceal cchar=⬲
     syntax keyword hsNiceOperator foldr conceal cchar=⥁
     syntax keyword hsNiceOperator unfold conceal cchar=↹
 
