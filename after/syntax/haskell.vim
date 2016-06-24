@@ -229,60 +229,54 @@ if !Cf('h')
 endif
 
 " 'C' option to enable encircled 'm' letter ⓜ concealing for fmap.
-if Cf('C')
-    syntax match hsNiceOperator "<$>"    conceal cchar=ⓜ
-    syntax match hsNiceOperator "`fmap`" conceal cchar=ⓜ
-" 'l' option to disable fmap/lift concealing with ↥.
-elseif !Cf('l')
-    syntax match hsNiceOperator "`liftM`" conceal cchar=↥
-    syntax match hsNiceOperator "`liftA`" conceal cchar=↥
-    syntax match hsNiceOperator "`fmap`"  conceal cchar=↥
-    syntax match hsNiceOperator "<$>"     conceal cchar=↥
+syntax match hsNiceOperator "`liftM`" conceal cchar=↥
+syntax match hsNiceOperator "`liftA`" conceal cchar=↥
+syntax match hsNiceOperator "`fmap`"  conceal cchar=↷
+syntax match hsNiceOperator "<$>"     conceal cchar=↷
 
-    syntax match LIFTQ  contained "`" conceal
-    syntax match LIFTQl contained "l" conceal cchar=↥
-    syntax match LIFTl  contained "l" conceal cchar=↥
-    syntax match LIFTi  contained "i" conceal
-    syntax match LIFTf  contained "f" conceal
-    syntax match LIFTt  contained "t" conceal
-    syntax match LIFTA  contained "A" conceal
-    syntax match LIFTM  contained "M" conceal
-    syntax match LIFT2  contained "2" conceal cchar=²
-    syntax match LIFT3  contained "3" conceal cchar=³
-    syntax match LIFT4  contained "4" conceal cchar=⁴
-    syntax match LIFT5  contained "5" conceal cchar=⁵
+syntax match LIFTQ  contained "`" conceal
+syntax match LIFTQl contained "l" conceal cchar=↥
+syntax match LIFTl  contained "l" conceal cchar=↥
+syntax match LIFTi  contained "i" conceal
+syntax match LIFTf  contained "f" conceal
+syntax match LIFTt  contained "t" conceal
+syntax match LIFTA  contained "A" conceal
+syntax match LIFTM  contained "M" conceal
+syntax match LIFT2  contained "2" conceal cchar=²
+syntax match LIFT3  contained "3" conceal cchar=³
+syntax match LIFT4  contained "4" conceal cchar=⁴
+syntax match LIFT5  contained "5" conceal cchar=⁵
 
-    syntax match hsNiceOperator "`liftM2`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT2
-    syntax match hsNiceOperator "`liftM3`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT3
-    syntax match hsNiceOperator "`liftM4`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT4
-    syntax match hsNiceOperator "`liftM5`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT5
-    syntax match hsNiceOperator "`liftA2`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT2
-    syntax match hsNiceOperator "`liftA3`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT3
+syntax match hsNiceOperator "`liftM2`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT2
+syntax match hsNiceOperator "`liftM3`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT3
+syntax match hsNiceOperator "`liftM4`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT4
+syntax match hsNiceOperator "`liftM5`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT5
+syntax match hsNiceOperator "`liftA2`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT2
+syntax match hsNiceOperator "`liftA3`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT3
 
-    syntax match FMAPf    contained "f" conceal cchar=↥
-    syntax match FMAPm    contained "m" conceal
-    syntax match FMAPa    contained "a" conceal
-    syntax match FMAPp    contained "p" conceal
-    syntax match FMAPSPC  contained " " conceal
-    syntax match hsNiceOperator "\<fmap\>\s*" contains=FMAPf,FMAPm,FMAPa,FMAPp,FMAPSPC
+syntax match FMAPf    contained "f" conceal cchar=↷
+syntax match FMAPm    contained "m" conceal
+syntax match FMAPa    contained "a" conceal
+syntax match FMAPp    contained "p" conceal
+syntax match FMAPSPC  contained " " conceal
+syntax match hsNiceOperator "\<fmap\>\s*" contains=FMAPf,FMAPm,FMAPa,FMAPp,FMAPSPC
 
-    syntax match LIFTSPC contained " " conceal
-    syntax match hsNiceOperator "\<liftA\>\s*"  contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTA,LIFTSPC
-    syntax match hsNiceOperator "\<liftA2\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT2,LIFTSPC
-    syntax match hsNiceOperator "\<liftA3\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT3,LIFTSPC
+syntax match LIFTSPC contained " " conceal
+syntax match hsNiceOperator "\<liftA\>\s*"  contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTA,LIFTSPC
+syntax match hsNiceOperator "\<liftA2\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT2,LIFTSPC
+syntax match hsNiceOperator "\<liftA3\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT3,LIFTSPC
 
-    syntax match hsNiceOperator "\<liftM\>\s*"  contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFTSPC
-    syntax match hsNiceOperator "\<liftM2\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT2,LIFTSPC
-    syntax match hsNiceOperator "\<liftM3\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT3,LIFTSPC
-    syntax match hsNiceOperator "\<liftM4\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT4,LIFTSPC
-    syntax match hsNiceOperator "\<liftM5\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT5,LIFTSPC
+syntax match hsNiceOperator "\<liftM\>\s*"  contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFTSPC
+syntax match hsNiceOperator "\<liftM2\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT2,LIFTSPC
+syntax match hsNiceOperator "\<liftM3\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT3,LIFTSPC
+syntax match hsNiceOperator "\<liftM4\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT4,LIFTSPC
+syntax match hsNiceOperator "\<liftM5\>\s*" contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTM,LIFT5,LIFTSPC
 
-    " TODO: Move liftIO to its own flag?
-    syntax match LIFTIOL contained "l" conceal
-    syntax match LIFTI   contained "I" conceal cchar=i
-    syntax match LIFTO   contained "O" conceal cchar=o
-    syntax match hsNiceOperator "\<liftIO\>" contains=LIFTIOl,LIFTi,LIFTf,LIFTt,LIFTI,LIFTO
-endif
+" TODO: Move liftIO to its own flag?
+syntax match LIFTIOL contained "l" conceal
+syntax match LIFTI   contained "I" conceal cchar=i
+syntax match LIFTO   contained "O" conceal cchar=o
+syntax match hsNiceOperator "\<liftIO\>" contains=LIFTIOl,LIFTi,LIFTf,LIFTt,LIFTI,LIFTO
 
 " '↱' option to disable mapM/forM concealing with ↱/↰
 if !Cf('↱')
@@ -304,7 +298,6 @@ if !Cf('↱')
     syntax keyword hsNiceOperator putStr conceal cchar=⎙
     syntax keyword hsNiceOperator putStrLn conceal cchar=⎙
 
-    syntax keyword hsNiceOperator map conceal cchar=↷
     syntax keyword hsNiceOperator fmap conceal cchar=↷
 
     syntax keyword hsNiceOperator filter conceal cchar=⬲
