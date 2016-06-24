@@ -89,6 +89,7 @@ if s:extraConceal
     syntax match hsNiceOperator "!!" conceal cchar=‼
     syntax match hsNiceOperator "++\ze[^+]" conceal cchar=⧺
     syntax match hsNiceOperator "\<forall\>" conceal cchar=∀
+    syntax match hsNiceOperator "\<forAll\>" conceal cchar=∀
     syntax match hsNiceOperator "-<" conceal cchar=↢
     syntax match hsNiceOperator ">-" conceal cchar=↣
     syntax match hsNiceOperator "-<<" conceal cchar=⤛
