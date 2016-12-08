@@ -30,7 +30,7 @@ syntax match hsNiceOperator "\/=" conceal cchar=≠
 let s:extraConceal = 1
 " Some windows font don't support some of the characters,
 " so if they are the main font, we don't load them :)
-if has("win32")
+if has('win32')
     let s:incompleteFont = [ 'Consolas'
                         \ , 'Lucida Console'
                         \ , 'Courier New'
