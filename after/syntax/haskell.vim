@@ -319,28 +319,23 @@ syntax match hsNiceOperator "\<imagPart\>" conceal cchar=ℑ
 syntax match hsNiceSpecial "\<True\>"  conceal cchar=𝐓
 syntax match hsNiceSpecial "\<False\>" conceal cchar=𝐅
 
-" 'B' option to disable Bool type to 𝔹 concealing
-if !Cf('B')
-    " Not an official notation ttbomk. But at least
-    " http://www.haskell.org/haskellwiki/Unicode-symbols mentions it.
-    syntax match hsNiceOperator "\<Bool\>" conceal cchar=𝔹
-endif
+syntax match hsNiceOperator "\<Bool\>" conceal cchar=𝔹
 
-    syntax match hsNiceOperator "\<Rational\>" conceal cchar=ℚ
-    syntax match hsNiceOperator "\<Integer\>"  conceal cchar=ℤ
-    syntax match hsNiceOperator "\<Float\>"   conceal cchar=𝔽
-    syntax match hsNiceOperator "\<Double\>"   conceal cchar=ℝ
+syntax match hsNiceOperator "\<Rational\>" conceal cchar=ℚ
+syntax match hsNiceOperator "\<Integer\>"  conceal cchar=ℤ
+syntax match hsNiceOperator "\<Float\>"   conceal cchar=𝔽
+syntax match hsNiceOperator "\<Double\>"   conceal cchar=ℝ
 
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)0\ze\_W" conceal cchar=⁰
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)1\ze\_W" conceal cchar=¹
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)2\ze\_W" conceal cchar=²
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)3\ze\_W" conceal cchar=³
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)4\ze\_W" conceal cchar=⁴
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)5\ze\_W" conceal cchar=⁵
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)6\ze\_W" conceal cchar=⁶
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)7\ze\_W" conceal cchar=⁷
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)8\ze\_W" conceal cchar=⁸
-    syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)9\ze\_W" conceal cchar=⁹
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)0\ze\_W" conceal cchar=⁰
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)1\ze\_W" conceal cchar=¹
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)2\ze\_W" conceal cchar=²
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)3\ze\_W" conceal cchar=³
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)4\ze\_W" conceal cchar=⁴
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)5\ze\_W" conceal cchar=⁵
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)6\ze\_W" conceal cchar=⁶
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)7\ze\_W" conceal cchar=⁷
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)8\ze\_W" conceal cchar=⁸
+syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)9\ze\_W" conceal cchar=⁹
 
 " 'a' option to disable alphabet superscripts concealing, e.g. xⁿ.
 if !Cf('a')
@@ -371,13 +366,10 @@ if !Cf('a')
     syntax match hsNiceOperator "\(\*\*\|\^\|\^\^\)z\ze\_W" conceal cchar=ᶻ
 endif
 
-" Not really Haskell, but quite handy for writing proofs in pseudo-code.
-if Cf('∴')
-    syntax match hsNiceOperator "\<therefore\>" conceal cchar=∴
-    syntax match hsNiceOperator "\<exists\>" conceal cchar=∃
-    syntax match hsNiceOperator "\<notExist\>" conceal cchar=∄
-    syntax match hsNiceOperator ":=" conceal cchar=←
-endif
+syntax match hsNiceOperator "\<therefore\>" conceal cchar=∴
+syntax match hsNiceOperator "\<exists\>" conceal cchar=∃
+syntax match hsNiceOperator "\<notExist\>" conceal cchar=∄
+syntax match hsNiceOperator ":=" conceal cchar=←
 
 " TODO:
 " See Basic Syntax Extensions - School of Haskell | FP Complete
