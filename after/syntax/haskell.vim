@@ -197,11 +197,10 @@ if !Cf('h')
     syntax match hsNiceOperator "<<\ze\_[[:alpha:][:space:]_()[\]]" conceal cchar=«
 endif
 
-" 'C' option to enable encircled 'm' letter ⓜ concealing for fmap.
 syntax match hsNiceOperator "`liftM`" conceal cchar=↥
 syntax match hsNiceOperator "`liftA`" conceal cchar=↥
-syntax match hsNiceOperator "`fmap`"  conceal cchar=↷
-syntax match hsNiceOperator "<$>"     conceal cchar=↷
+syntax match hsNiceOperator "`fmap`"  conceal cchar=↥
+syntax match hsNiceOperator "<$>"     conceal cchar=↥
 
 syntax match LIFTQ  contained "`" conceal
 syntax match LIFTQl contained "l" conceal cchar=↥
@@ -223,7 +222,7 @@ syntax match hsNiceOperator "`liftM5`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,L
 syntax match hsNiceOperator "`liftA2`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT2
 syntax match hsNiceOperator "`liftA3`" contains=LIFTQ,LIFTQl,LIFTi,LIFTf,LIFTt,LIFTA,LIFT3
 
-syntax match FMAPf    contained "f" conceal cchar=↷
+syntax match FMAPf    contained "f" conceal cchar=↥
 syntax match FMAPm    contained "m" conceal
 syntax match FMAPa    contained "a" conceal
 syntax match FMAPp    contained "p" conceal
@@ -267,9 +266,9 @@ if !Cf('↱')
     syntax keyword hsNiceOperator putStr conceal cchar=⎙
     syntax keyword hsNiceOperator putStrLn conceal cchar=⎙
 
-    syntax keyword hsNiceOperator fmap conceal cchar=↷
+    syntax keyword hsNiceOperator fmap conceal cchar=↥
 
-    syntax keyword hsNiceOperator filter conceal cchar=⬲
+    " syntax keyword hsNiceOperator filter conceal cchar=⬲
     syntax keyword hsNiceOperator foldr conceal cchar=⥁
     syntax keyword hsNiceOperator unfold conceal cchar=↹
 
