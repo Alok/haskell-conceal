@@ -31,6 +31,7 @@
 "   - 1.1: Better handling of non utf-8 systems, and avoid some
 "           concealing operations on windows on some fonts
 "
+scriptencoding utf-8
 
 
 " Cf - check a flag. Return true if the flag is specified.

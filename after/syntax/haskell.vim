@@ -1,4 +1,4 @@
-set scriptencoding utf-8
+scriptencoding utf-8
 
 function! Cf(flag)
     return exists('g:hscoptions') && stridx(g:hscoptions, a:flag) >= 0
