@@ -109,10 +109,10 @@ syntax match hsNiceOperator "\<Left\>"    conceal cchar=𝐿
 syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=𝐌
 " syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=?
 " syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=⁇
-" syntax match hsNiceOperator "\<Just\>"    conceal cchar=𝐽
-syntax match hsNiceOperator "\<Just\>"    conceal cchar=✔
-" syntax match hsNiceOperator "\<Nothing\>" conceal cchar=𝑁
-syntax match hsNiceOperator "\<Nothing\>" conceal cchar=✘
+syntax match hsNiceOperator "\<Just\>"    conceal cchar=𝐽
+syntax match hsNiceOperator "\<isJust\>"    conceal cchar=✔
+syntax match hsNiceOperator "\<Nothing\>" conceal cchar=𝑁
+" syntax match hsNiceOperator "\<Nothing\>" conceal cchar=✘
 " syntax match hsNiceOperator "\<Nothing\>" conceal cchar=∅
 syntax match hsNiceOperator "\<isNothing\>" conceal cchar=✘
 
@@ -155,11 +155,7 @@ syntax match hsNiceOperator "\<not\>"                        conceal cchar=¬
     syntax match hsNiceOperator "\.\." conceal cchar=…
 
 " '⇒' option to disable `implies` concealing with ⇒
-if !Cf('⇒')
-    " Easily distinguishable from => keyword since the keyword can only be
-    " used in type signatures.
-    syntax match hsNiceOperator "`implies`"  conceal cchar=⇒
-endif
+syntax match hsNiceOperator "`implies`"  conceal cchar=⇒
 
 " '⇔' option to disable `iff` concealing with ⇔
 if !Cf('⇔')
@@ -167,7 +163,7 @@ if !Cf('⇔')
 endif 
 
     syntax match hsNiceOperator "\<return\>" conceal cchar=⏎
-    syntax match hsNiceOperator "\<join\>"   conceal cchar=µ
+    " syntax match hsNiceOperator "\<join\>"   conceal cchar=µ
 
 " 'b' option to disable bind (left and right) concealing
 if Cf('b')
