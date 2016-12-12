@@ -1,39 +1,5 @@
-" vim: sw=4
-"=============================================================================
-" What Is This: Add some conceal operator for your literate haskell files
-" File:         lhaskell.vim (conceal enhancement)
-" Last Change:  2015-11-13
-" Version:      1.3.3
-" Require:
-"   set nocompatible
-"     somewhere on your .vimrc
-"
-"   Vim 7.3 or Vim compiled with conceal patch.
-"   Use --with-features=big or huge in order to compile it in.
-"
-" Usage:
-"   Drop this file in your
-"       ~/.vim/after/syntax folder (Linux/MacOSX/BSD...)
-"       ~/vimfiles/after/syntax folder (Windows)
-"
-"   For this script to work, you have to set the encoding
-"   to utf-8 :set enc=utf-8
-"
-" Additional:
-"     * if you want to avoid the loading, add the following
-"       line in your .vimrc :
-"        let g:no_haskell_conceal = 1
-"  Changelog:
-"   - 1.3.3: lhaskell.vim added, only concealing inside code (\begin, >>) tags.
-"   - 1.3.1: putting undefined in extra conceal, not appearing on windows
-"   - 1.3: adding new arrow characters used by GHC in Unicode extension.
-"   - 1.2: Fixing conceal level to be local (thx Erlend Hamberg)
-"   - 1.1: Better handling of non utf-8 systems, and avoid some
-"           concealing operations on windows on some fonts
-"
+scriptencoding utf-8
 
-
-" Cf - check a flag. Return true if the flag is specified.
 function! Cf(flag)
     return exists('g:hscoptions') && stridx(g:hscoptions, a:flag) >= 0
 endfunction
