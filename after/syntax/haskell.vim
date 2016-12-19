@@ -86,8 +86,8 @@ if s:extraConceal
     syntax match hsNiceOperator "`mappend`" conceal cchar=⊕
     syntax match hsNiceOperator "<>"        conceal cchar=⊕
     syntax match hsNiceOperator "\<empty\>" conceal cchar=∅
-    syntax match hsNiceOperator "\<mzero\>" conceal cchar=∅
-    syntax match hsNiceOperator "\<mempty\>" conceal cchar=∅
+    " syntax match hsNiceOperator "\<mzero\>" conceal cchar=∅
+    " syntax match hsNiceOperator "\<mempty\>" conceal cchar=∅
 endif
 
 hi link hsNiceOperator Operator
@@ -109,9 +109,9 @@ syntax match hsNiceOperator "\<Left\>"    conceal cchar=𝐿
 syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=𝐌
 " syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=?
 " syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=⁇
-syntax match hsNiceOperator "\<Just\>"    conceal cchar=𝐽
+" syntax match hsNiceOperator "\<Just\>"    conceal cchar=𝐽
 syntax match hsNiceOperator "\<isJust\>"    conceal cchar=✔
-syntax match hsNiceOperator "\<Nothing\>" conceal cchar=𝑁
+" syntax match hsNiceOperator "\<Nothing\>" conceal cchar=𝑁
 " syntax match hsNiceOperator "\<Nothing\>" conceal cchar=✘
 " syntax match hsNiceOperator "\<Nothing\>" conceal cchar=∅
 syntax match hsNiceOperator "\<isNothing\>" conceal cchar=✘
@@ -139,10 +139,10 @@ else
 endif
 
 " 's' option to disable space consumption after ∑,∏,√ and ¬ functions.
-syntax match hsNiceOperator "\<sum\>"                        conceal cchar=∑
-syntax match hsNiceOperator "\<product\>"                    conceal cchar=∏
+" syntax match hsNiceOperator "\<sum\>"                        conceal cchar=∑
+" syntax match hsNiceOperator "\<product\>"                    conceal cchar=∏
 syntax match hsNiceOperator "\<sqrt\>"                       conceal cchar=√
-syntax match hsNiceOperator "\<not\>"                        conceal cchar=¬
+" syntax match hsNiceOperator "\<not\>"                        conceal cchar=¬
 " else
     " syntax match hsNiceOperator "\<sum\>\(\ze\s*[.$]\|\s*\)"     conceal cchar=∑
     " syntax match hsNiceOperator "\<product\>\(\ze\s*[.$]\|\s*\)" conceal cchar=∏
@@ -162,7 +162,7 @@ if !Cf('⇔')
     syntax match hsNiceOperator "`iff`" conceal cchar=⇔
 endif 
 
-    syntax match hsNiceOperator "\<return\>" conceal cchar=⏎
+    " syntax match hsNiceOperator "\<return\>" conceal cchar=⏎
     " syntax match hsNiceOperator "\<join\>"   conceal cchar=µ
 
 " 'b' option to disable bind (left and right) concealing
@@ -258,15 +258,15 @@ if !Cf('↱')
     syntax match hsNiceOperator "\<mapM\>\s*"  contains=MAPMm,MAPMa,MAPMp,MAPMM,SPC
     syntax match hsNiceOperator "\<mapM_\>\s*" contains=MAPMm,MAPMa,MAPMp,MAPMM,MAPMU,SPC
 
-    syntax keyword hsNiceOperator print conceal cchar=⎙
-    syntax keyword hsNiceOperator putStr conceal cchar=⎙
-    syntax keyword hsNiceOperator putStrLn conceal cchar=⎙
+    " syntax keyword hsNiceOperator print conceal cchar=⎙
+    " syntax keyword hsNiceOperator putStr conceal cchar=⎙
+    " syntax keyword hsNiceOperator putStrLn conceal cchar=⎙
 
     syntax keyword hsNiceOperator fmap conceal cchar=↥
 
     " syntax keyword hsNiceOperator filter conceal cchar=⬲
-    syntax keyword hsNiceOperator foldr conceal cchar=⥁
-    syntax keyword hsNiceOperator unfold conceal cchar=↹
+    " syntax keyword hsNiceOperator foldr conceal cchar=⥁
+    " syntax keyword hsNiceOperator unfold conceal cchar=↹
 
     syntax match FORMQ  contained "`" conceal
     syntax match FORMfQ contained "f" conceal cchar=↱
