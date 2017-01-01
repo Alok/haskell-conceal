@@ -17,9 +17,9 @@ if !Cf('q')
     syntax match hsNiceOperator "\<tau\>" conceal cchar=τ
     syntax match hsNiceOperator "\<planckConstant\>" conceal cchar=ℎ
     syntax match hsNiceOperator "\<reducedPlanckConstant\|planckConstantOver2Pi\|hbar\|hslash\>" conceal cchar=ℏ
-    syntax keyword hsNiceOperator print conceal cchar=ℙ
-    syntax keyword hsNiceOperator length conceal cchar=ℓ
-    syntax keyword hsNiceOperator genericLength conceal cchar=𝕃
+    " syntax keyword hsNiceOperator print conceal cchar=ℙ
+    " syntax keyword hsNiceOperator length conceal cchar=ℓ
+    " syntax keyword hsNiceOperator genericLength conceal cchar=𝕃
 endif
 
 syntax match hsNiceOperator "==" conceal cchar=≝
