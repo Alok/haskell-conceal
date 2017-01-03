@@ -86,8 +86,8 @@ if s:extraConceal
     syntax match hsNiceOperator "`mappend`" conceal cchar=⊕
     syntax match hsNiceOperator "<>"        conceal cchar=⊕
     syntax match hsNiceOperator "\<empty\>" conceal cchar=∅
-    " syntax match hsNiceOperator "\<mzero\>" conceal cchar=∅
-    " syntax match hsNiceOperator "\<mempty\>" conceal cchar=∅
+    syntax match hsNiceOperator "\<mzero\>" conceal cchar=ε
+    syntax match hsNiceOperator "\<mempty\>" conceal cchar=ε
 endif
 
 hi link hsNiceOperator Operator
