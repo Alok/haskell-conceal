@@ -107,13 +107,7 @@ syntax match hsNiceOperator "\<Right\>"   conceal cchar=𝑅
 syntax match hsNiceOperator "\<Left\>"    conceal cchar=𝐿
 
 syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=𝐌
-" syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=?
-" syntax match hsNiceOperator "\<Maybe\>"   conceal cchar=⁇
-" syntax match hsNiceOperator "\<Just\>"    conceal cchar=𝐽
 syntax match hsNiceOperator "\<isJust\>"    conceal cchar=✔
-" syntax match hsNiceOperator "\<Nothing\>" conceal cchar=𝑁
-" syntax match hsNiceOperator "\<Nothing\>" conceal cchar=✘
-" syntax match hsNiceOperator "\<Nothing\>" conceal cchar=∅
 syntax match hsNiceOperator "\<isNothing\>" conceal cchar=✘
 
 syntax match hsNiceOperator "\:\:" conceal cchar=⦂
@@ -161,9 +155,6 @@ syntax match hsNiceOperator "`implies`"  conceal cchar=⇒
 if !Cf('⇔')
     syntax match hsNiceOperator "`iff`" conceal cchar=⇔
 endif 
-
-    " syntax match hsNiceOperator "\<return\>" conceal cchar=⏎
-    " syntax match hsNiceOperator "\<join\>"   conceal cchar=µ
 
 " 'b' option to disable bind (left and right) concealing
 if Cf('b')
