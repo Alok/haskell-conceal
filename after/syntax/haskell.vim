@@ -214,7 +214,6 @@ syntax match FMAPm    contained "m" conceal
 syntax match FMAPa    contained "a" conceal
 syntax match FMAPp    contained "p" conceal
 syntax match FMAPSPC  contained " " conceal
-syntax match hsNiceOperator "\<fmap\>\s*" contains=FMAPf,FMAPm,FMAPa,FMAPp,FMAPSPC
 
 syntax match LIFTSPC contained " " conceal
 syntax match hsNiceOperator "\<liftA\>\s*"  contains=LIFTl,LIFTi,LIFTf,LIFTt,LIFTA,LIFTSPC
@@ -233,46 +232,33 @@ syntax match LIFTI   contained "I" conceal cchar=i
 syntax match LIFTO   contained "O" conceal cchar=o
 syntax match hsNiceOperator "\<liftIO\>" contains=LIFTIOl,LIFTi,LIFTf,LIFTt,LIFTI,LIFTO
 
-" '↱' option to disable mapM/forM concealing with ↱/↰
-if !Cf('↱')
-    syntax match MAPMQ  contained "`" conceal
-    syntax match MAPMm  contained "m" conceal cchar=↱
-    syntax match MAPMmQ contained "m" conceal cchar=↰
-    syntax match MAPMa  contained "a" conceal
-    syntax match MAPMp  contained "p" conceal
-    syntax match MAPMM  contained "M" conceal
-    syntax match MAPMM  contained "M" conceal
-    syntax match MAPMU  contained "_" conceal cchar=_
-    syntax match SPC    contained " " conceal
-    syntax match hsNiceOperator "`mapM_`"      contains=MAPMQ,MAPMmQ,MAPMa,MAPMp,MAPMM,MAPMU
-    syntax match hsNiceOperator "`mapM`"       contains=MAPMQ,MAPMmQ,MAPMa,MAPMp,MAPMM
-    syntax match hsNiceOperator "\<mapM\>\s*"  contains=MAPMm,MAPMa,MAPMp,MAPMM,SPC
-    syntax match hsNiceOperator "\<mapM_\>\s*" contains=MAPMm,MAPMa,MAPMp,MAPMM,MAPMU,SPC
+syntax match MAPMQ  contained "`" conceal
+syntax match MAPMm  contained "m" conceal cchar=↱
+syntax match MAPMmQ contained "m" conceal cchar=↰
+syntax match MAPMa  contained "a" conceal
+syntax match MAPMp  contained "p" conceal
+syntax match MAPMM  contained "M" conceal
+syntax match MAPMM  contained "M" conceal
+syntax match MAPMU  contained "_" conceal cchar=_
+syntax match SPC    contained " " conceal
+syntax match hsNiceOperator "`mapM_`"      contains=MAPMQ,MAPMmQ,MAPMa,MAPMp,MAPMM,MAPMU
+syntax match hsNiceOperator "`mapM`"       contains=MAPMQ,MAPMmQ,MAPMa,MAPMp,MAPMM
 
-    " syntax keyword hsNiceOperator print conceal cchar=⎙
-    " syntax keyword hsNiceOperator putStr conceal cchar=⎙
-    " syntax keyword hsNiceOperator putStrLn conceal cchar=⎙
+" syntax keyword hsNiceOperator filter conceal cchar=⬲
+" syntax keyword hsNiceOperator foldr conceal cchar=⥁
+" syntax keyword hsNiceOperator unfold conceal cchar=↹
 
-    syntax keyword hsNiceOperator fmap conceal cchar=↥
+syntax match FORMQ  contained "`" conceal
+syntax match FORMfQ contained "f" conceal cchar=↱
+syntax match FORMf  contained "f" conceal cchar=↰
+syntax match FORMo  contained "o" conceal
+syntax match FORMr  contained "r" conceal
+syntax match FORMM  contained "M" conceal
+syntax match FORMU  contained "_" conceal cchar=_
 
-    " syntax keyword hsNiceOperator filter conceal cchar=⬲
-    " syntax keyword hsNiceOperator foldr conceal cchar=⥁
-    " syntax keyword hsNiceOperator unfold conceal cchar=↹
+syntax match hsNiceOperator "`forM`"  contains=FORMQ,FORMfQ,FORMo,FORMr,FORMM
+syntax match hsNiceOperator "`forM_`" contains=FORMQ,FORMfQ,FORMo,FORMr,FORMM,FORMU
 
-    syntax match FORMQ  contained "`" conceal
-    syntax match FORMfQ contained "f" conceal cchar=↱
-    syntax match FORMf  contained "f" conceal cchar=↰
-    syntax match FORMo  contained "o" conceal
-    syntax match FORMr  contained "r" conceal
-    syntax match FORMM  contained "M" conceal
-    syntax match FORMU  contained "_" conceal cchar=_
-
-    syntax match hsNiceOperator "`forM`"  contains=FORMQ,FORMfQ,FORMo,FORMr,FORMM
-    syntax match hsNiceOperator "`forM_`" contains=FORMQ,FORMfQ,FORMo,FORMr,FORMM,FORMU
-
-    syntax match hsNiceOperator "\<forM\>\s*"  contains=FORMf,FORMo,FORMr,FORMM,SPC
-    syntax match hsNiceOperator "\<forM_\>\s*" contains=FORMf,FORMo,FORMr,FORMM,FORMU,SPC
-endif
 
 " ∵ means "because/since/due to." With quite a stretch this can be
 " used for 'where'. We preserve spacing, otherwise it breaks indenting
