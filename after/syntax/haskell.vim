@@ -144,7 +144,7 @@ syntax match hsNiceOperator "\<sqrt\>"                       conceal cchar=√
     " syntax match hsNiceOperator "\<not\>\(\ze\s*[.$]\|\s*\)"     conceal cchar=¬
 " endif
 
-    syntax match hsNiceOperator "*" conceal cchar=∙
+    syntax match hsNiceOperator /\*/ms=s+1,me=e-1 conceal cchar=∙
 
     syntax match hsNiceOperator "\.\." conceal cchar=…
 
